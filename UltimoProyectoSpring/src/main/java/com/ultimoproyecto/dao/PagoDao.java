@@ -19,17 +19,17 @@ public class PagoDao {
 	}
 
 	public int save(Pago p){    
-	    String sql="insert into Empleado (nombre,especialidad) values('"+p.getIdpago()+"', Mes Año="+p.getMontoregular()+ "', Mes Año="+p.getMontoadicionales() + "', Mes Año="+p.getIdcliente() + "')";
+	    String sql="insert into Pagos (idpago,mesanio,montoregular,montoadicionales,idcliente) values('"+p.getIdpago()+"','" +p.getMesanio() + "','" +p.getMontoregular()+ "','" +p.getMontoadicionales() + "','" +p.getIdcliente() + "')";
 	    return template.update(sql);
 	}
 	
 	public Pago getEmpById(int idpago){    
-	    String sql="select * from Pago where idpago=?";
+	    String sql="select * from Pagos where idpago=?";
 	    return template.queryForObject(sql, new Object[]{idpago},new BeanPropertyRowMapper<Pago>(Pago.class));    
 	}
 	
 	public List<Pago> getPago(){    
-	    return template.query("select * from Pago",new RowMapper<Pago>(){    
+	    return template.query("select * from Pagos",new RowMapper<Pago>(){    
 	        public Pago mapRow(ResultSet rs, int row) throws SQLException {    
 	            Pago p=new Pago();    
 	            p.setIdpago(rs.getInt(1));    

@@ -19,7 +19,7 @@ public class EmpleadoDao {
 	}
 
 	public int save(Empleado e){    
-	    String sql="insert into Empleado (nombre,especialidad) values('"+e.getNombre()+"', especialidad="+e.getEspecialidad()+"')";
+	    String sql="insert into Empleado (nombre,especialidad) values('"+e.getNombre()+"','"+e.getEspecialidad()+"')";
 	    return template.update(sql);
 	}
 	
@@ -34,7 +34,7 @@ public class EmpleadoDao {
 	}    
 
 	public Empleado getEmpById(int idempleado){    
-	    String sql="select * from Cliente where idempleado=?";
+	    String sql="select * from Empleado where idempleado=?";
 	    return template.queryForObject(sql, new Object[]{idempleado},new BeanPropertyRowMapper<Empleado>(Empleado.class));    
 	}
 	
