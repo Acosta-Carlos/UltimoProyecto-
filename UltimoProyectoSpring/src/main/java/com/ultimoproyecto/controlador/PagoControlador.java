@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.ultimoproyecto.beans.Pago;
 import com.ultimoproyecto.dao.PagoDao;
 
-@Controller
+@Controller ("/pago")
 public class PagoControlador {
 
 	@Autowired
@@ -21,10 +21,10 @@ public class PagoControlador {
     @RequestMapping("/pagform")    
     public String showform(Model m){    
         m.addAttribute("command", new Pago());  
-        return "cliform";
+        return "pagform";
     } 
 
-    @RequestMapping(value="/save",method = RequestMethod.POST)    
+    @RequestMapping(value="/pago/save",method = RequestMethod.POST)    
     public String save(@ModelAttribute("pag") Pago pag){    
         daopag.save(pag);
         return "redirect:/viewpag";

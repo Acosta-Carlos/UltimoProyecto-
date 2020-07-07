@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.ultimoproyecto.beans.Cliente;
 import com.ultimoproyecto.dao.ClienteDao;
 
-@Controller
+@Controller ("/cliente")
 public class ClienteControlador {
 
 	@Autowired
@@ -25,7 +25,7 @@ public class ClienteControlador {
         return "cliform";
     } 
 
-    @RequestMapping(value="/save",method = RequestMethod.POST)    
+    @RequestMapping(value="/cliente/save",method = RequestMethod.POST)    
     public String save(@ModelAttribute("cli") Cliente cli){    
         dao.save(cli);
         return "redirect:/viewcli";
@@ -45,7 +45,7 @@ public class ClienteControlador {
         return "clieditform";
     }
 
-    @RequestMapping(value="/editsave",method = RequestMethod.POST)    
+    @RequestMapping(value="/cliente/editsave",method = RequestMethod.POST)    
     public String editsave(@ModelAttribute("cli") Cliente cli){
         dao.update(cli);
         return "redirect:/viewcli";

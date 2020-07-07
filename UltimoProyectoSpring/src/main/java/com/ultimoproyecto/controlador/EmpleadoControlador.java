@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.ultimoproyecto.beans.Empleado;
 import com.ultimoproyecto.dao.EmpleadoDao;
 
-@Controller
+@Controller ("/empleado")
 public class EmpleadoControlador {
 
 	@Autowired
@@ -25,7 +25,7 @@ public class EmpleadoControlador {
         return "empform";
     } 
 	
-    @RequestMapping(value="/save",method = RequestMethod.POST)    
+    @RequestMapping(value="/empleado/save",method = RequestMethod.POST)    
     public String save(@ModelAttribute("emp") Empleado emp){    
         daoemp.save(emp);
         return "redirect:/viewemp";
@@ -45,7 +45,7 @@ public class EmpleadoControlador {
         return "empditform";
     }
 
-    @RequestMapping(value="/editsave",method = RequestMethod.POST)    
+    @RequestMapping(value="/empleado/editsave",method = RequestMethod.POST)    
     public String editsave(@ModelAttribute("emp") Empleado emp){
         daoemp.update(emp);
         return "redirect:/viewemp";
