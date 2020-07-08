@@ -1,6 +1,5 @@
-
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>      
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>    
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 
 <!doctype html>
@@ -16,62 +15,38 @@
     
     <link href="${bootstrapCSS}" rel="stylesheet" />
     <script src="${jqueryJS}"></script>
-    <title>Agregar Cliente</title>
+    <title>Agregar Empleado</title>
   </head>
   <body>
     <div class="jumbotron">
         <header class="text-center">
-            <h2>Agregar Cliente</h2>
+            <h2>Agregar Empleado</h2>
         </header>
     </div> 
      <form:form method="post" action="save">
       <div class="container">
-          <div class="row">
-             <label class="col-4"><h5>ID Cliente:</h5></label>
+                <div class="row">
+             <label class="col-4"><h5>ID Empleado:</h5></label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>              
-              <form:input type="number" class="col-6 input-group" path="id"/>
+              <form:input type="number" class="col-6 input-group" path="idempleado"/>
           </div>
           <br><br>
           <div class="row">
-              <label class="col-4"><h5>Nombre:</h5></label>
+             <label class="col-4"><h5>Nombre:</h5></label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
-              </div>
+              </div>              
               <form:input type="text" class="col-6 input-group" path="nombre"/>
           </div>
           <br><br>
           <div class="row">
-              <label class="col-4"><h5>Telefono:</h5></label>
+              <label class="col-4"><h5>Especialidad:</h5></label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="number" class="col-6 input-group" path="telefono"/>
-          </div>
-          <br><br>
-          <div class="row">
-              <label class="col-4"><h5>Correo electrónico:</h5></label>
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><b>></b></span>
-              </div>
-              <form:input type="text" class="col-6 input-group" path="correoelectronico"/>
-          </div>
-          <br><br>
-          <div class="row">
-              <label class="col-4"><h5>Rubro:</h5></label>
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><b>></b></span>
-              </div>
-              <form:input type="text" class="col-6 input-group" path="rubro"/>
-          </div>
-          <br><br>
-          <div class="row">
-              <label class="col-4"><h5>Dirección:</h5></label>
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><b>></b></span>
-              </div>
-              <form:input type="text" class="col-6 input-group" path="direccion"/>
+              <form:input type=" text" class="col-6 input-group" path="especialidad"/>
           </div>
           <br><br>
                 <c:if test="${ccmensaje != null}">
@@ -80,9 +55,9 @@
           <br><br><br>
            <div class="row">
                <div class="container" style="max-width:55%">
-               <input type="submit" class="btn btn-warning col-4" value="Listado de Clientes" formaction="viewcli">
+               <input type="submit" class="btn btn-warning col-4" value="Volver" formaction="viewemp">
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="submit" class="btn btn-warning col-4" value="Agregar cliente">
+                <input type="submit" class="btn btn-warning col-4" value="Agregar Empleado">
                </div>
            </div>          
         </div>
@@ -99,5 +74,4 @@
     <script src="${popperJS}"></script>
     <script src="${bootstrapJS}"></script>
   </body>
-
 </html>

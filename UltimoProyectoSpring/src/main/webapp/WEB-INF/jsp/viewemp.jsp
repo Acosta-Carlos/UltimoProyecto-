@@ -1,12 +1,10 @@
-
-
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Listado de Clientes</title>
+<title>Listado de Empleados</title>
     <!-- CSS Bootstrap -->
 	<spring:url value="/resources/css/bootstrap.min.css" var="bootstrapCSS" />
     <spring:url value="/resources/css/datatables.css" var="datatablesCSS"/>
@@ -27,47 +25,39 @@
 </head>
 <body style="padding: 10px;">
 
-	<h1>Listado de Clientes</h1>
+	<h1>Listado de empleados</h1>
 	<c:if test="${ccmensaje != null}">
-		<h2>
-			<c:out value="${ccmensaje}"></c:out>
-		</h2>
+		<h3>
+		<c:out value="${ccmensaje}"></c:out>
+		</h3>
 	</c:if>
 
 <table id="tabla" class="table table-striped table-bordered" style="width: 100%; ">
-	<thead>		
+	<thead>
 	<tr>
-		<th>ID Cliente</th>
+		<th>ID Empleado</th>
 		<th>Nombre</th>
-		<th>Telefono</th>
-		<th>Correo electrónico</th>
-		<th>Rubro</th>
-		<th>Direccion</th>
+		<th>Especialidad</th>
 		<th>Acciones</th>
 	</tr>
 	</thead>
 	
 	<tbody>
-	<c:forEach items="${list}" var="cli">
+	<c:forEach items="${list}" var="emp">
 	<tr>
-		<td>${cli.id}</td> 
-		<td>${cli.nombre}</td>
-		<td>${cli.telefono}</td>
-		<td>${cli.correoelectronico}</td>
-		<td>${cli.rubro}</td>
-		<td>${cli.direccion}</td>
+		<td>${emp.idempleado}</td> 
+		<td>${emp.nombre}</td>
+		<td>${emp.especialidad}</td>
 		<td>
-			<a href="deletecli/${cli.id}">Eliminar</a>&nbsp;
-			<a href="editcli/${cli.id}">Editar</a>&nbsp;
+			<a href="deleteemp/${emp.idempleado}">Eliminar</a>&nbsp;
+			<a href="editemp/${emp.idempleado}">Editar</a>
 		</td>
-		</tr>
+	</tr>
 	</c:forEach>
 	</tbody>
 </table>
 <br/>
-	<a href="cliform">Agregar nuevo Cliente</a>&nbsp;&nbsp;
+	<a href="empform">Agregar nuevo empleado</a>&nbsp;&nbsp;
 	<a href="index.jsp">Volver al inicio</a>
-
 </body>
-
 </html>
