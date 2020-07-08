@@ -1,4 +1,4 @@
-package com.UltimoProyecto.beans;
+package com.ultimoproyecto.beans;
 
 public class Capacitacion {
 	
