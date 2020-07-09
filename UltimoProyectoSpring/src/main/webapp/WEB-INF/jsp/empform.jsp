@@ -1,6 +1,5 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>    
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 
 <!doctype html>
 <html lang="en">
@@ -23,14 +22,14 @@
             <h2>Agregar Empleado</h2>
         </header>
     </div> 
-     <form:form method="post" action="save">
+     <form:form method="post" action="emplsave">
       <div class="container">
                 <div class="row">
              <label class="col-4"><h5>ID Empleado:</h5></label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>              
-              <form:input type="number" class="col-6 input-group" path="idempleado"/>
+              <form:input class="col-6 input-group" path="idempleado"/>
           </div>
           <br><br>
           <div class="row">
@@ -38,7 +37,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>              
-              <form:input type="text" class="col-6 input-group" path="nombre"/>
+              <form:input class="col-6 input-group" path="nombre"/>
           </div>
           <br><br>
           <div class="row">
@@ -46,18 +45,14 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type=" text" class="col-6 input-group" path="especialidad"/>
+              <form:input class="col-6 input-group" path="especialidad"/>
           </div>
-          <br><br>
-                <c:if test="${ccmensaje != null}">
-					<h3><c:out value="${ccmensaje}"></c:out></h3>
-				</c:if>
           <br><br><br>
            <div class="row">
                <div class="container" style="max-width:55%">
-               <input type="submit" class="btn btn-warning col-4" value="Volver" formaction="viewemp">
+               <a class="btn btn-warning col-4" href="viewemp" role="button">Volver</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="submit" class="btn btn-warning col-4" value="Agregar Empleado">
+               <input type="submit" class="btn btn-warning col-8" value="Agregar Empleado">
                </div>
            </div>          
         </div>

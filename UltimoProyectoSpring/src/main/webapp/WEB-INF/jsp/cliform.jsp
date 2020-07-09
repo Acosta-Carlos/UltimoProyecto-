@@ -1,6 +1,5 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>      
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 
 <!doctype html>
 <html lang="en">
@@ -23,14 +22,14 @@
             <h2>Agregar Cliente</h2>
         </header>
     </div> 
-     <form:form method="post" action="save">
+     <form:form method="post" action="clisave">
       <div class="container">
           <div class="row">
              <label class="col-4"><h5>ID Cliente:</h5></label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>              
-              <form:input type="number" class="col-6 input-group" path="id"/>
+              <form:input class="col-6 input-group" path="id"/>
           </div>
           <br><br>
           <div class="row">
@@ -38,7 +37,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="nombre"/>
+              <form:input class="col-6 input-group" path="nombre" value="nombre"/>
           </div>
           <br><br>
           <div class="row">
@@ -46,7 +45,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="number" class="col-6 input-group" path="telefono"/>
+              <form:input class="col-6 input-group" path="telefono"/>
           </div>
           <br><br>
           <div class="row">
@@ -54,7 +53,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="correoelectronico"/>
+              <form:input class="col-6 input-group" path="correoelectronico"/>
           </div>
           <br><br>
           <div class="row">
@@ -62,7 +61,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="rubro"/>
+              <form:input class="col-6 input-group" path="rubro"/>
           </div>
           <br><br>
           <div class="row">
@@ -70,18 +69,14 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="direccion"/>
+              <form:input class="col-6 input-group" path="direccion"/>
           </div>
-          <br><br>
-                <c:if test="${ccmensaje != null}">
-					<h3><c:out value="${ccmensaje}"></c:out></h3>
-				</c:if>
           <br><br><br>
            <div class="row">
                <div class="container" style="max-width:55%">
-               <input type="submit" class="btn btn-warning col-4" value="Listado de Clientes" formaction="viewcli">
+               <a class="btn btn-warning col-4" href="viewcli" role="button">Volver</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="submit" class="btn btn-warning col-4" value="Agregar cliente">
+               <input type="submit" class="btn btn-warning col-4" value="Agregar cliente">
                </div>
            </div>          
         </div>
