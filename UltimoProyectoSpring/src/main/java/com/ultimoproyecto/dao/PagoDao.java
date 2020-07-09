@@ -19,7 +19,7 @@ public class PagoDao {
 	}
 
 	public int save(Pago p){    
-	    String sql="insert into Pagos (idpago,mesanio,montoregular,montoadicionales,idcliente) values('"+p.getIdpago()+"','" +p.getMesanio() + "','" +p.getMontoregular()+ "','" +p.getMontoadicionales() + "','" +p.getIdcliente() + "')";
+	    String sql="insert into Pagos (idpago,mesanio,montoregular,montoadicionales,cliente_id) values('"+p.getIdpago()+"','" +p.getMesanio() + "','" +p.getMontoregular()+ "','" +p.getMontoadicionales() + "','" +p.getCliente_id() + "')";
 	    return template.update(sql);
 	}
 	
@@ -36,7 +36,7 @@ public class PagoDao {
 	            p.setMesanio(rs.getString(2));    
 	            p.setMontoregular(rs.getInt(3));
 	            p.setMontoadicionales(rs.getInt(4));
-	            p.setIdcliente(rs.getInt(5));
+	            p.setCliente_id(rs.getInt(5));
 	            return p;
 	        }    
 	    });    

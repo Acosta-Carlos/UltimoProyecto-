@@ -14,30 +14,22 @@
     
     <link href="${bootstrapCSS}" rel="stylesheet" />
     <script src="${jqueryJS}"></script>
-    <title>Agregar Cliente</title>
+    <title>Editar Cliente</title>
   </head>
   <body>
     <div class="jumbotron">
         <header class="text-center">
-            <h2>Agregar Cliente</h2>
+            <h2>Editar Cliente</h2>
         </header>
     </div> 
-     <form:form method="post" action="clisave">
+     <form:form method="post" action="/UltimoProyectoSpring/clieditsave">
       <div class="container">
           <div class="row">
-             <label class="col-4"><h5>ID Cliente:</h5></label>
+             <label class="col-4"><h5>Nombre:</h5></label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>              
-              <form:input class="col-6 input-group" path="id"/>
-          </div>
-          <br><br>
-          <div class="row">
-              <label class="col-4"><h5>Nombre:</h5></label>
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><b>></b></span>
-              </div>
-              <form:input class="col-6 input-group" path="nombre" value="nombre"/>
+              <form:input class="col-6 input-group" path="nombre"/>
           </div>
           <br><br>
           <div class="row">
@@ -74,9 +66,10 @@
           <br><br><br>
            <div class="row">
                <div class="container" style="max-width:55%">
-               <a class="btn btn-warning col-4" href="viewcli" role="button">Volver</a>
+               <input type="submit" class="btn btn-warning col-4" value="Volver" name="viewcli"/>
+                <form:hidden path="id"/>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-               <input type="submit" class="btn btn-warning col-4" value="Agregar cliente">
+                <input type="submit" class="btn btn-warning col-4" value="Editar Cliente"/>
                </div>
            </div>          
         </div>
@@ -85,12 +78,8 @@
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <spring:url value="/resources/js/jquery-3.5.1.min.js" var="jqueryJS" />
-    <spring:url value="/resources/js/popper.min.js" var="popperJS"/>
-    <spring:url value="/resources/js/bootstrap.min.js" var="bootstrapJS" />
-    
-    <script src="${jqueryJS}"></script>
-    <script src="${popperJS}"></script>
-    <script src="${bootstrapJS}"></script>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

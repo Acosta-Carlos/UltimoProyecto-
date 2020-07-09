@@ -24,7 +24,7 @@ public class PagoControlador {
         return "pagform";
     } 
 
-    @RequestMapping(value="/pago/save",method = RequestMethod.POST)    
+    @RequestMapping(value="/pagosave",method = RequestMethod.POST)    
     public String save(@ModelAttribute("pag") Pago pag){    
         daopag.save(pag);
         return "redirect:/viewpag";

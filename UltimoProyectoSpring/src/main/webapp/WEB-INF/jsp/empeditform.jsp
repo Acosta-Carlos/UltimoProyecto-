@@ -1,5 +1,5 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>    
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>      
 
 <!doctype html>
 <html lang="en">
@@ -14,24 +14,16 @@
     
     <link href="${bootstrapCSS}" rel="stylesheet" />
     <script src="${jqueryJS}"></script>
-    <title>Agregar Empleado</title>
+    <title>Editar Empleado</title>
   </head>
   <body>
     <div class="jumbotron">
         <header class="text-center">
-            <h2>Agregar Empleado</h2>
+            <h2>Editar Empleado</h2>
         </header>
     </div> 
-     <form:form method="post" action="emplsave">
+     <form:form method="post" action="/UltimoProyectoSpring/empleditsave">
       <div class="container">
-                <div class="row">
-             <label class="col-4"><h5>ID Empleado:</h5></label>
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><b>></b></span>
-              </div>              
-              <form:input class="col-6 input-group" path="idempleado"/>
-          </div>
-          <br><br>
           <div class="row">
              <label class="col-4"><h5>Nombre:</h5></label>
               <div class="input-group-prepend">
@@ -50,9 +42,10 @@
           <br><br><br>
            <div class="row">
                <div class="container" style="max-width:55%">
-               <a class="btn btn-warning col-4" href="viewemp" role="button">Volver</a>
+               <input type="submit" class="btn btn-warning col-4" value="Volver" name="viewemp"/>
+                <form:hidden path="idempleado"/>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-               <input type="submit" class="btn btn-warning col-8" value="Agregar Empleado">
+                <input type="submit" class="btn btn-warning col-4" value="Editar Empleado"/>
                </div>
            </div>          
         </div>
@@ -60,7 +53,7 @@
       <div class="container" style="height: 50px;"></div>
     
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, then Popper.js, then Boot strap JS -->
     <spring:url value="/resources/js/jquery-3.5.1.min.js" var="jqueryJS" />
     <spring:url value="/resources/js/popper.min.js" var="popperJS"/>
     <spring:url value="/resources/js/bootstrap.min.js" var="bootstrapJS" />

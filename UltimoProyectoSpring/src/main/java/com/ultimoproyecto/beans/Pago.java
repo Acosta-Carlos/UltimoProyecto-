@@ -6,19 +6,19 @@ public class Pago {
 	private String mesanio;
 	private int montoregular;
 	private int montoadicionales;
-	private int idcliente;
+	private int cliente_id;
 
 
 	public Pago() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Pago(int idpago, String mesanio, int montoregular, int montoadicionales, int idcliente) {
+	public Pago(int idpago, String mesanio, int montoregular, int montoadicionales, int cliente_id) {
 		this.idpago = idpago;
 		this.mesanio = mesanio;
 		this.montoregular = montoregular;
 		this.montoadicionales = montoadicionales;
-		this.idcliente = idcliente;
+		this.cliente_id = cliente_id;
 	}
 
 
@@ -64,20 +64,20 @@ public class Pago {
 	}
 
 
-	public int getIdcliente() {
-		return idcliente;
+	public int getCliente_id() {
+		return cliente_id;
 	}
 
 
 
-	public void setIdcliente(int idcliente) {
-		this.idcliente = idcliente;
+	public void setCliente_id(int cliente_id) {
+		this.cliente_id = cliente_id;
 	}
 
 
 	@Override
 	public String toString() {
-		return "Pago [idpago=" + idpago + ", mesanio=" + mesanio + ", montoregular=" + montoregular + ", montoadicionales=" + montoadicionales + ", idcliente=" + idcliente + "]";
+		return "Pago [idpago=" + idpago + ", mesanio=" + mesanio + ", montoregular=" + montoregular + ", montoadicionales=" + montoadicionales + ", cliente_id=" + cliente_id + "]";
 	}
 	
 	

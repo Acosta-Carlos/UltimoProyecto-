@@ -1,6 +1,5 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>        
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 
 <!doctype html>
 <html lang="en">
@@ -23,14 +22,14 @@
             <h2>Agregar Pago</h2>
         </header>
     </div> 
-     <form:form method="post" action="/pago/save">
+     <form:form method="post" action="pagosave">
       <div class="container">
           <div class="row">
              <label class="col-4"><h5>ID Pago:</h5></label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>              
-              <form:input type="number" class="col-6 input-group" path="idpago"/>
+              <form:input class="col-6 input-group" path="idpago"/>
           </div>
           <br><br>
           <div class="row">
@@ -38,7 +37,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="mesanio"/>
+              <form:input class="col-6 input-group" path="mesanio"/>
           </div>
           <br><br>
           <div class="row">
@@ -46,7 +45,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="number" class="col-6 input-group" path="montoregular"/>
+              <form:input class="col-6 input-group" path="montoregular"/>
           </div>
           <br><br>
           <div class="row">
@@ -54,7 +53,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="number" class="col-6 input-group" path="montoadicionales"/>
+              <form:input class="col-6 input-group" path="montoadicionales"/>
           </div>
           <br><br>
           <div class="row">
@@ -62,16 +61,12 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="number" class="col-6 input-group" path="idcliente"/>
+              <form:input class="col-6 input-group" path="cliente_id"/>
           </div>
-          <br><br>
-                <c:if test="${ccmensaje != null}">
-					<h3><c:out value="${ccmensaje}"></c:out></h3>
-				</c:if>
           <br><br><br>
            <div class="row">
                <div class="container" style="max-width:55%">
-               <input type="submit" class="btn btn-warning col-4" value="Listar Pago de Clientes" formaction="viewpag">
+               <a class="btn btn-warning col-4" href="viewpag" role="button">Volver</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="submit" class="btn btn-warning col-4" value="Grabar Pago">
                </div>
