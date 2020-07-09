@@ -26,11 +26,6 @@
 <body style="padding: 10px;">
 
 	<h1>Listado de empleados</h1>
-	<c:if test="${ccmensaje != null}">
-		<h3>
-		<c:out value="${ccmensaje}"></c:out>
-		</h3>
-	</c:if>
 
 <table id="tabla" class="table table-striped table-bordered" style="width: 100%; ">
 	<thead>
