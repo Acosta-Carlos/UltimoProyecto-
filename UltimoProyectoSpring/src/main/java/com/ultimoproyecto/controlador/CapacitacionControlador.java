@@ -19,7 +19,7 @@ public class CapacitacionControlador {
 	@Autowired
 	CapacitacionDao dao;
 	
-    @RequestMapping("/cliform")    
+    @RequestMapping("/CrearCapacitacion")    
     public String showform(Model m){    
         m.addAttribute("command", new Capacitacion());  
         return "cliform";
@@ -31,13 +31,13 @@ public class CapacitacionControlador {
         return "redirect:/viewcli";
     }
     
-    @RequestMapping("/viewcli")    
-    public String viewcli(Model m){    
-        List<Capacitacion> list=dao.getCapacitacion();
-        m.addAttribute("list",list);  
-        return "viewcli";
+    @RequestMapping("/ListaCapacitacion")    
+    public String ListaCapacitacion(Model m){    
+        List<Capacitacion> ListaCapacitacion=dao.getCapacitacion();
+        m.addAttribute("ListaCapacitacion",ListaCapacitacion);  
+        return "ListaCapacitacion";
     }
-    /*
+    /*s
     @RequestMapping(value="/editcli/{id}")    
     public String edit(@PathVariable int id, Model m){    
     	Capacitacion cli=dao.getCliById(id);
