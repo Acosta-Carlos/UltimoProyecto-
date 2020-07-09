@@ -41,7 +41,7 @@
 	<a href="ListarCapacitacion" class="list-group-item list-group-item-action list-group-item-light">Gestionar Capacitaciones</a>
 	<a href="ListadoAccidente" class="list-group-item list-group-item-action list-group-item-dark">Gestionar Accidentes</a>
 	<a href="ListadoAsesoria" class="list-group-item list-group-item-action list-group-item-light">Gestionar Asesorias</a>
-	<a href="ListadoMejoras" class="list-group-item list-group-item-action list-group-item-dark">Gestionar Actividades de Mejoras</a>
+	<a href="viewmej" class="list-group-item list-group-item-action list-group-item-dark">Gestionar Actividades de Mejoras</a>
 	<a href="viewpag" class="list-group-item list-group-item-action list-group-item-light">Gestionar Pagos</a>
 	</div>
 </div>

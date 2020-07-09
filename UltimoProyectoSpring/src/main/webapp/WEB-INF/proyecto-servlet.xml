@@ -46,6 +46,9 @@
 	<bean id="daopag" class="com.ultimoproyecto.dao.PagoDao">    
 		<property name="template" ref="jt"></property>    
 	</bean>
+	<bean id="daomej" class="com.ultimoproyecto.dao.MejoraDao">
+		<property name="template" ref="jt"></property>	
+	</bean>
 	
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:annotation-driven />	
