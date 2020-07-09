@@ -19,12 +19,12 @@ public class EmpleadoDao {
 	}
 
 	public int save(Empleado e){    
-	    String sql="insert into Empleado (nombre,especialidad) values('"+e.getNombre()+"','"+e.getEspecialidad()+"')";
+	    String sql="insert into Empleado (idempleado,nombre,especialidad) values('"+e.getIdempleado()+"','"+e.getNombre()+"','"+e.getEspecialidad()+"')";
 	    return template.update(sql);
 	}
 	
 	public int update(Empleado e){    
-	    String sql="update Empleado set nombre='"+e.getNombre()+"', especialidad="+e.getEspecialidad()+"' where id="+e.getIdempleado()+"";
+	    String sql="update Empleado set idempleado='"+e.getIdempleado()+"', nombre='"+e.getNombre()+"', especialidad='"+e.getEspecialidad()+"' where idempleado="+e.getIdempleado()+"";
 	    return template.update(sql);    
 	}   
 	

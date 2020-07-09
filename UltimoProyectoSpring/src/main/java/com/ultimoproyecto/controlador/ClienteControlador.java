@@ -25,7 +25,7 @@ public class ClienteControlador {
         return "cliform";
     } 
 
-    @RequestMapping(value="/cliente/save",method = RequestMethod.POST)    
+    @RequestMapping(value="/clisave",method = RequestMethod.POST)    
     public String save(@ModelAttribute("cli") Cliente cli){    
         dao.save(cli);
         return "redirect:/viewcli";
@@ -45,7 +45,7 @@ public class ClienteControlador {
         return "clieditform";
     }
 
-    @RequestMapping(value="/cliente/editsave",method = RequestMethod.POST)    
+    @RequestMapping(value="/clieditsave",method = RequestMethod.POST)    
     public String editsave(@ModelAttribute("cli") Cliente cli){
         dao.update(cli);
         return "redirect:/viewcli";

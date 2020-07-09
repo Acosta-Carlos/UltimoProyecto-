@@ -25,7 +25,7 @@ public class EmpleadoControlador {
         return "empform";
     } 
 	
-    @RequestMapping(value="/empleado/save",method = RequestMethod.POST)    
+    @RequestMapping(value="/emplsave",method = RequestMethod.POST)    
     public String save(@ModelAttribute("emp") Empleado emp){    
         daoemp.save(emp);
         return "redirect:/viewemp";
@@ -42,10 +42,10 @@ public class EmpleadoControlador {
     public String edit(@PathVariable int idempleado, Model m){    
         Empleado emp=daoemp.getEmpById(idempleado);
         m.addAttribute("command",emp);
-        return "empditform";
+        return "empeditform";
     }
 
-    @RequestMapping(value="/empleado/editsave",method = RequestMethod.POST)    
+    @RequestMapping(value="/empleditsave",method = RequestMethod.POST)    
     public String editsave(@ModelAttribute("emp") Empleado emp){
         daoemp.update(emp);
         return "redirect:/viewemp";
