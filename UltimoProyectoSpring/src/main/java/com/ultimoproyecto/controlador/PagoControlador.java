@@ -5,7 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;    
 import org.springframework.stereotype.Controller;  
 import org.springframework.ui.Model;  
-import org.springframework.web.bind.annotation.ModelAttribute;    
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;    
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -37,6 +38,24 @@ public class PagoControlador {
         return "viewpag";
     }
     
+    @RequestMapping(value="/editpag/{idpago}")    
+    public String edit(@PathVariable int idpago, Model m){    
+        Pago pag=daopag.getEmpById(idpago);
+        m.addAttribute("command",pag);
+        return "pageditform";
+    }
+
+    @RequestMapping(value="/pageditsave",method = RequestMethod.POST)    
+    public String editsave(@ModelAttribute("pag") Pago pag){
+        daopag.update(pag);
+        return "redirect:/viewpag";
+    }
+
+    @RequestMapping(value="/deletepag/{idpago}",method = RequestMethod.GET)    
+    public String delete(@PathVariable int idpago){    
+        daopag.delete(idpago);    
+        return "redirect:/viewpag";
+    }
     
 }
 

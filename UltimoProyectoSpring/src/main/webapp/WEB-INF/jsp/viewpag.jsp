@@ -33,8 +33,9 @@
 		<th>ID Pago</th>
 		<th>Mes/Año</th>
 		<th>Monto Regular</th>
-		<th>Monto Adicional</th>
+		<th>Monto Adicionales</th>
 		<th>ID Cliente</th>
+		<th>Acciones</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -46,6 +47,10 @@
 			<td>$${pag.montoregular}</td>
 			<td>$${pag.montoadicionales}</td>
 			<td>${pag.cliente_id}</td>
+			<td>
+				<a href="deletepag/${pag.idpago}">Eliminar</a>&nbsp;
+				<a href="editpag/${pag.idpago}">Editar</a>
+			</td>
 		</tr>
 	</c:forEach>
 	</tbody>

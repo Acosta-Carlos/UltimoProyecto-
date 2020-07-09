@@ -22,6 +22,16 @@ public class PagoDao {
 	    String sql="insert into Pagos (idpago,mesanio,montoregular,montoadicionales,cliente_id) values('"+p.getIdpago()+"','" +p.getMesanio() + "','" +p.getMontoregular()+ "','" +p.getMontoadicionales() + "','" +p.getCliente_id() + "')";
 	    return template.update(sql);
 	}
+
+	public int update(Pago p){    
+	    String sql="update Pagos set idpago='"+p.getIdpago()+"', mesanio='"+p.getMesanio()+"', montoregular='"+p.getMontoregular()+"', montoadicionales='"+p.getMontoadicionales()+"', cliente_id='"+p.getCliente_id()+"' where idpago="+p.getIdpago()+"";
+	    return template.update(sql);    
+	}   
+	
+	public int delete(int idpago){    
+	    String sql="delete from Pagos where idpago="+idpago+"";
+	    return template.update(sql);
+	}    
 	
 	public Pago getEmpById(int idpago){    
 	    String sql="select * from Pagos where idpago=?";
