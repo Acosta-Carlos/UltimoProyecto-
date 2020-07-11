@@ -30,6 +30,9 @@
 		<property name="username" value="UCH"></property>    
 		<property name="password" value="1234"></property>    
 	</bean>
+	<!-- usuario service/dao -->
+    <bean id="userService" class="com.ultimoproyecto.service.ServicioUsuarioImpl" />
+    <bean id="userDao" class="com.ultimoproyecto.dao.UsuarioDaoImpl" />
     
 	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">    
 		<property name="dataSource" ref="ds"></property>    
@@ -46,6 +49,8 @@
 	<bean id="daopag" class="com.ultimoproyecto.dao.PagoDao">    
 		<property name="template" ref="jt"></property>    
 	</bean>
+	
+	<!-- login -->
 	
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:annotation-driven />	
