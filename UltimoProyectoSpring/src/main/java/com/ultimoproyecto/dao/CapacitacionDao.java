@@ -17,34 +17,34 @@ public class CapacitacionDao {
 	}
 	
 	public int save(Capacitacion c){    
-	    String sql="insert into Capacitacion (id_capacitacion,fecha,hora,num_asistentes,id_visita) values('"+c.getId_capacitacion()+"',"+c.getFecha()+",'"+c.getHora()+"','"+c.getNum_asistentes()+"','"+c.getId_visita()+"')";
+	    String sql="insert into Capacitacion (idcapacitacion,fecha,hora,numasistentes,idvisita) values('"+c.getIdcapacitacion()+"',"+c.getFecha()+",'"+c.getHora()+"','"+c.getNumasistentes()+"','"+c.getIdvisita()+"')";
 	    return template.update(sql);
 	}
 	
-	/*public int update(Capacitacion c){    
-	    String sql="update Capacitacion set id_capacitacion='"+c.getId_capacitacion()+"', fecha="+c.getFecha()+",hora='"+c.getHora()+"', num_asistentes='"+c.getNum_asistentes()+"', id_visita='"+c.getId_visita()+"' where id_capacitacion="+c.getId_capacitacion()+"";
+	public int update(Capacitacion c){    
+	    String sql="update Capacitacion set idcapacitacion='"+c.getIdcapacitacion()+"', fecha="+c.getFecha()+",hora='"+c.getHora()+"', numasistentes='"+c.getNumasistentes()+"', id_visita='"+c.getIdvisita()+"' where id_capacitacion="+c.getIdcapacitacion()+"";
 	    return template.update(sql);    
 	}   
 	
-	public int delete(int id){    
-	    String sql="delete from Capacitacion where id_capacitacion="+id_capacitacion+"";
+	public int delete(int idcapacitacion){    
+	    String sql="delete from Capacitacion where idcapacitacion="+idcapacitacion+"";
 	    return template.update(sql);
 	}    
 
-	public Capacitacion getCliById(int id){    
+	public Capacitacion getCapById(int idcapacitacion){    
 	    String sql="select * from Cliente where id=?";
-	    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Capacitacion>(Capacitacion.class));    
+	    return template.queryForObject(sql, new Object[]{idcapacitacion},new BeanPropertyRowMapper<Capacitacion>(Capacitacion.class));    
 	}
-	*/
+
 	public List<Capacitacion> getCapacitacion(){    
 	    return template.query("select * from Capacitacion",new RowMapper<Capacitacion>(){    
 	        public Capacitacion mapRow(ResultSet rs, int row) throws SQLException {    
 	        	Capacitacion c = new Capacitacion();    
-	            c.setId_capacitacion(rs.getInt(1));    
+	            c.setIdcapacitacion(rs.getInt(1));    
 	            c.setFecha(rs.getString(2));    
 	            c.setHora(rs.getString(3));
-	            c.setNum_asistentes(rs.getInt(4));
-	            c.setId_visita(rs.getInt(5));
+	            c.setNumasistentes(rs.getInt(4));
+	            c.setIdvisita(rs.getInt(5));
 	           
 	            return c;
 	        }    

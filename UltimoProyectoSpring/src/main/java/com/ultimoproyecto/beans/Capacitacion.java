@@ -2,72 +2,61 @@ package com.ultimoproyecto.beans;
 
 public class Capacitacion {
 	
-	public int id_capacitacion;
+	public int idcapacitacion;
 	public String fecha;
 	public String hora;
-	public int num_asistentes;
-	public int id_visita;
-	
-	public Capacitacion(int id_capacitacion, String fecha, String hora, int num_asistentes, int id_visita) {
-		
-		this.id_capacitacion = id_capacitacion;
+	public int numasistentes;
+	public int idvisita;
+	public Capacitacion(int idcapacitacion, String fecha, String hora, int numasistentes, int idvisita) {
+		super();
+		this.idcapacitacion = idcapacitacion;
 		this.fecha = fecha;
 		this.hora = hora;
-		this.num_asistentes = num_asistentes;
-		this.id_visita = id_visita;
+		this.numasistentes = numasistentes;
+		this.idvisita = idvisita;
 	}
+	
 	public Capacitacion() {
 		
+		
 	}
-
-	public int getId_capacitacion() {
-		return id_capacitacion;
+	
+	public int getIdcapacitacion() {
+		return idcapacitacion;
 	}
-
-	public void setId_capacitacion(int id_capacitacion) {
-		this.id_capacitacion = id_capacitacion;
+	public void setIdcapacitacion(int idcapacitacion) {
+		this.idcapacitacion = idcapacitacion;
 	}
-
 	public String getFecha() {
 		return fecha;
 	}
-
 	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
-
 	public String getHora() {
 		return hora;
 	}
-
 	public void setHora(String hora) {
 		this.hora = hora;
 	}
-
-	public int getNum_asistentes() {
-		return num_asistentes;
+	public int getNumasistentes() {
+		return numasistentes;
 	}
-
-	public void setNum_asistentes(int num_asistentes) {
-		this.num_asistentes = num_asistentes;
+	public void setNumasistentes(int numasistentes) {
+		this.numasistentes = numasistentes;
 	}
-
-	public int getId_visita() {
-		return id_visita;
+	public int getIdvisita() {
+		return idvisita;
 	}
-
-	public void setId_visita(int id_visita) {
-		this.id_visita = id_visita;
+	public void setIdvisita(int idvisita) {
+		this.idvisita = idvisita;
 	}
-
 	@Override
 	public String toString() {
-		return "Capacitacion [id_capacitacion=" + id_capacitacion + ", fecha=" + fecha + ", hora=" + hora
-				+ ", num_asistentes=" + num_asistentes + ", id_visita=" + id_visita + "]";
+		return "Capacitacion [idcapacitacion=" + idcapacitacion + ", fecha=" + fecha + ", hora=" + hora
+				+ ", numasistentes=" + numasistentes + ", idvisita=" + idvisita + "]";
 	}
-	
-	
-	
-	
+
+
 
 }

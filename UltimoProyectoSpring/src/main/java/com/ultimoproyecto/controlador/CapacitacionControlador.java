@@ -17,45 +17,45 @@ import com.ultimoproyecto.dao.CapacitacionDao;
 public class CapacitacionControlador {
 
 	@Autowired
-	CapacitacionDao dao;
+	CapacitacionDao capadao;
 	
-    @RequestMapping("/CrearCapacitacion")    
+    @RequestMapping("/capform")    
     public String showform(Model m){    
         m.addAttribute("command", new Capacitacion());  
-        return "cliform";
+        return "capform";
     } 
 
-    @RequestMapping(value="/save",method = RequestMethod.POST)    
-    public String save(@ModelAttribute("cli") Capacitacion cli){    
-        dao.save(cli);
-        return "redirect:/viewcli";
+    @RequestMapping(value="/capsave",method = RequestMethod.POST)    
+    public String save(@ModelAttribute("cap") Capacitacion cap){    
+    	capadao.save(cap);
+        return "redirect:/viewcap";
     }
     
-    @RequestMapping("/ListaCapacitacion")    
-    public String ListaCapacitacion(Model m){    
-        List<Capacitacion> ListaCapacitacion=dao.getCapacitacion();
-        m.addAttribute("ListaCapacitacion",ListaCapacitacion);  
-        return "ListaCapacitacion";
+    @RequestMapping("/capform")    
+    public String viewcap(Model m){    
+        List<Capacitacion> list=capadao.getCapacitacion();
+        m.addAttribute("list",list);  
+        return "viewcap";
     }
-    /*s
-    @RequestMapping(value="/editcli/{id}")    
-    public String edit(@PathVariable int id, Model m){    
-    	Capacitacion cli=dao.getCliById(id);
-        m.addAttribute("command",cli);
-        return "clieditform";
-    }
-
-    @RequestMapping(value="/editsave",method = RequestMethod.POST)    
-    public String editsave(@ModelAttribute("cli") Capacitacion cli){
-        dao.update(cli);
-        return "redirect:/viewcli";
+  
+    @RequestMapping(value="/editcap/{idcapacitacion}")    
+    public String edit(@PathVariable int id_capacitacion, Model m){    
+    	Capacitacion cap=capadao.getCapById(id_capacitacion);
+        m.addAttribute("command",cap);
+        return "capedittform";
     }
 
-    @RequestMapping(value="/deletecli/{id}",method = RequestMethod.GET)    
-    public String delete(@PathVariable int id){    
-        dao.delete(id);    
-        return "redirect:/viewcli";
+    @RequestMapping(value="/editcapsave",method = RequestMethod.POST)    
+    public String editsave(@ModelAttribute("cap") Capacitacion cap){
+    	capadao.update(cap);
+        return "redirect:/viewcap";
     }
- */   
+
+    @RequestMapping(value="/deletecap/{id}",method = RequestMethod.GET)    
+    public String delete(@PathVariable int idcapacitacion){    
+    	capadao.delete(idcapacitacion);    
+        return "redirect:/viewcap";
+    }
+  
 }
 
