@@ -8,16 +8,16 @@ public class Asesoria {
 	private String propuestas;
 	private String fecha;
 	private String especial;
-	private int visitaid;
+	private int visitas_idvisita;
 	
-	public Asesoria(int idasesoria, String detalle, String gestion, String propuestas, String fecha, String especial, int visitaid) {
+	public Asesoria(int idasesoria, String detalle, String gestion, String propuestas, String fecha, String especial, int visitas_idvisita) {
 		this.idasesoria = idasesoria;
 		this.detalle = detalle;
 		this.gestion = gestion;
 		this.propuestas = propuestas;
 		this.fecha = fecha;
 		this.especial = especial;
-		this.visitaid = visitaid;
+		this.visitas_idvisita = visitas_idvisita;
 	}
 
 	public Asesoria() {
@@ -97,14 +97,14 @@ public class Asesoria {
 
 
 
-	public int getVisitaid() {
-		return visitaid;
+	public int getVisitas_idvisita() {
+		return visitas_idvisita;
 	}
 
 
 
-	public void setVisitaid(int visitaid) {
-		this.visitaid = visitaid;
+	public void setVisitas_idvisita(int visitas_idvisita) {
+		this.visitas_idvisita = visitas_idvisita;
 	}
 
 
@@ -112,7 +112,7 @@ public class Asesoria {
 	@Override
 	public String toString() {
 		return "Asesoria [idasesoria=" + idasesoria + ", detalle=" + detalle + ", gestion=" + gestion + ", propuestas="
-				+ propuestas + ", fecha=" + fecha + ", especial=" + especial + ", visitaid=" + visitaid + "]";
+				+ propuestas + ", fecha=" + fecha + ", especial=" + especial + ", visitaid=" + visitas_idvisita + "]";
 	}
 	
 	
