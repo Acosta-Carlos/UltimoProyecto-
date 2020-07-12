@@ -29,7 +29,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>              
-              <form:input class="col-6 input-group" path="id_capacitacion"/>
+              <form:input class="col-6 input-group" path="idcapacitacion"/>
           </div>
           <br><br>
           <div class="row">
@@ -53,7 +53,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input class="col-6 input-group" path="num_asistentes"/>
+              <form:input class="col-6 input-group" path="numasistentes"/>
           </div>
           <br><br>
           <div class="row">
@@ -61,13 +61,13 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input class="col-6 input-group" path="id_visita"/>
+              <form:input class="col-6 input-group" path="idvisita"/>
           </div>
           <br><br><br>
            <div class="row">
                <div class="container" style="max-width:55%">
                <input type="submit" class="btn btn-warning col-4" value="Volver" name="viewcap"/>
-                <form:hidden path="id"/>
+                <form:hidden path="idcapacitacion"/>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="submit" class="btn btn-warning col-4" value="Editar Capacitacion"/>
                </div>
