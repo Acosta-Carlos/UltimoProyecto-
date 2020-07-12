@@ -23,15 +23,9 @@
             <h2>Editar Cliente</h2>
         </header>
     </div> 
-     <form:form method="post" action="/ultimoproyecto/editsave">    
+     <form:form method="post" action="/UltimoProyectoSpring/editsave">    
       <div class="container">
-          <div class="row">
-             <label class="col-4">ID Cliente:</label>
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><b>></b></span>
-              </div>              
-              <form:input type="number" class="col-6 input-group" path="id"/>
-          </div>
+         
           <br><br>
           <div class="row">
               <label class="col-4">Nombre:</label>
@@ -82,7 +76,7 @@
            <div class="row">
                <div class="container" style="max-width:55%">
                
-               <input type="submit" class="btn btn-warning col-4" value="Editar y Guardar" formaction="viewcli">
+               <input type="submit" class="btn btn-warning col-4" value="Editar y Guardar" >
             	<form:hidden path="id"/>
                </div>
                

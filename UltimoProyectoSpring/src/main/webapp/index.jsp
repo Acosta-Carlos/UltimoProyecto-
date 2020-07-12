@@ -1,4 +1,7 @@
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>      
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
+
 <!DOCTYPE html>
 <html lang="es">
 	<head>		
@@ -37,12 +40,9 @@
 
 	<div class="list-group text-center">
 	<a href="viewcli" class="list-group-item list-group-item-action list-group-item-light">Administrar Clientes</a>
-	<a href="viewemp" class="list-group-item list-group-item-action list-group-item-dark">Administrar Empleados</a>
-	<a href="ListarCapacitacion" class="list-group-item list-group-item-action list-group-item-light">Gestionar Capacitaciones</a>
-	<a href="ListadoAccidente" class="list-group-item list-group-item-action list-group-item-dark">Gestionar Accidentes</a>
-	<a href="ListadoAsesoria" class="list-group-item list-group-item-action list-group-item-light">Gestionar Asesorias</a>
-	<a href="ListadoMejoras" class="list-group-item list-group-item-action list-group-item-dark">Gestionar Actividades de Mejoras</a>
-	<a href="viewpag" class="list-group-item list-group-item-action list-group-item-light">Gestionar Pagos</a>
+	<a href="viewvisita" class="list-group-item list-group-item-action list-group-item-light">Administrar Visitas</a>
+	<a href="viewchequeo" class="list-group-item list-group-item-action list-group-item-light">Administrar Chequeos</a>
+	
 	</div>
 </div>
 

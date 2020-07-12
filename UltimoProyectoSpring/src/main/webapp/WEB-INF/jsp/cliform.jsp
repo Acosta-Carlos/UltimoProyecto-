@@ -31,7 +31,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>              
-              <form:input type="number" class="col-6 input-group" path="id"/>
+              <form:input  class="col-6 input-group" path="id"/>
           </div>
           <br><br>
           <div class="row">
@@ -39,15 +39,15 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="nombre"/>
+              <form:input  class="col-6 input-group" path="nombre"/>
           </div>
           <br><br>
           <div class="row">
-              <label class="col-4">Telefono:</label>
+              <label class="col-4">Teléfono:</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="number" class="col-6 input-group" path="telefono"/>
+              <form:input  class="col-6 input-group" path="telefono"/>
           </div>
           <br><br>
           <div class="row">
@@ -55,7 +55,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="correoelectronico"/>
+              <form:input  class="col-6 input-group" path="correoelectronico"/>
           </div>
           <br><br>
           <div class="row">
@@ -63,7 +63,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="rubro"/>
+              <form:input  class="col-6 input-group" path="rubro"/>
           </div>
           <br><br>
           <div class="row">
@@ -71,7 +71,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="direccion"/>
+              <form:input  class="col-6 input-group" path="direccion"/>
           </div>
           <br><br>
                 <c:if test="${ccmensaje != null}">

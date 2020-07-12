@@ -65,7 +65,7 @@
 	</tbody>
 </table>
 <br/>
-	<a href="accidenteform">Agregar nueva asesoria </a>&nbsp;&nbsp;
+	<a href="accidenteform">Agregar nuevo Accidente </a>&nbsp;&nbsp;
 	<a href="index.jsp">Volver al inicio</a>
 
 </body>

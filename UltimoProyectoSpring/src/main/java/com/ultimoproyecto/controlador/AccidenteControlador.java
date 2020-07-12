@@ -57,7 +57,7 @@ package com.ultimoproyecto.controlador;
 		    }
 
 		    @RequestMapping(value="/editsaveacci",method = RequestMethod.POST)    
-		    public String editsave(@ModelAttribute("ase") Accidente acci){
+		    public String editsave(@ModelAttribute("acci") Accidente acci){
 		        accidao.update(acci);
 		        log.info("Procesando edición de Accidentes");
 		        return "redirect:/viewaccidente";
