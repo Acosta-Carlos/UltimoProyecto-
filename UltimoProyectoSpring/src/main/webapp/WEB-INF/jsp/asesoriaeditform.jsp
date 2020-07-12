@@ -1,4 +1,3 @@
-
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>      
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
@@ -16,73 +15,88 @@
     
     <link href="${bootstrapCSS}" rel="stylesheet" />
     <script src="${jqueryJS}"></script>
-    <title>Agregar Cliente</title>
+    <title>Editar Asesoria</title>
   </head>
   <body>
     <div class="jumbotron">
         <header class="text-center">
-            <h2>Agregar Cliente</h2>
+            <h2>Editar Asesoria</h2>
         </header>
     </div> 
-     <form:form method="post" action="save">
+     <form:form method="post" action="/UltimoProyectoSpring/editsavease">
+     
       <div class="container">
           <div class="row">
-             <label class="col-4">ID Cliente:</label>
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><b>></b></span>
-              </div>              
-              <form:input type="number" class="col-6 input-group" path="id"/>
-          </div>
-          <br><br>
-          <div class="row">
-              <label class="col-4">Nombre:</label>
+              <label class="col-4">  Detalle :</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="nombre"/>
+              <form:input  class="col-6 input-group" path="detalle"/>
           </div>
           <br><br>
+          
+          
           <div class="row">
-              <label class="col-4">Telefono:</label>
+              <label class="col-4">  Gestión:</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="number" class="col-6 input-group" path="telefono"/>
+              <form:input  class="col-6 input-group" path="gestion"/>
           </div>
           <br><br>
+          
+          
           <div class="row">
-              <label class="col-4">Correo electrónico:</label>
+              <label class="col-4">  Propuestas:</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="correoelectronico"/>
+              <form:input  class="col-6 input-group" path="propuestas"/>
           </div>
           <br><br>
+          
+          
+          
           <div class="row">
-              <label class="col-4">Rubro:</label>
+              <label class="col-4">Fecha:</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="rubro"/>
+              <form:input  class="col-6 input-group" path="fecha"/>
           </div>
           <br><br>
+          
+          
+          
           <div class="row">
-              <label class="col-4">Dirección:</label>
+              <label class="col-4">  Especial:</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="direccion"/>
+              <form:input class="col-6 input-group" path="especial"/>
           </div>
           <br><br>
-                <c:if test="${ccmensaje != null}">
+    
+    
+    	<div class="row">
+              <label class="col-4">  Visita Id: </label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input  class="col-6 input-group" path="visitas_idvisita"/>
+          </div>
+          <br><br>
+           <c:if test="${ccmensaje != null}">
 					<h3><c:out value="${ccmensaje}"></c:out></h3>
 				</c:if>
           <br><br><br>
-           <div class="row">
+          
+          <div class="row">
                <div class="container" style="max-width:55%">
-               <input type="submit" class="btn btn-warning col-4" value="Listado de Clientes" formaction="viewcli">
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="submit" class="btn btn-warning col-4" value="Agregar cliente">
+               
+               <input type="submit" class="btn btn-warning col-4" value="Editar y Guardar" >
+             	<form:hidden path="idasesoria"/>
+            
                </div>
            </div>          
         </div>

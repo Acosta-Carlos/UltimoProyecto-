@@ -23,8 +23,8 @@
 <h2>Cliente</h2>
 
 	<div class="list-group text-center">
-	<a href="SolicitarAsesoria" class="list-group-item list-group-item-action list-group-item-light">Solicitar Asesoria </a>
- 	<a href="AgregarAccidente" class="list-group-item list-group-item-action list-group-item-dark"> Reportar Accidente</a>
+	<a href="asesoriaform" class="list-group-item list-group-item-action list-group-item-light">Solicitar Asesoria </a>
+ 	<a href="accidenteform" class="list-group-item list-group-item-action list-group-item-dark"> Reportar Accidente</a>
 	</div>
 </div>
 

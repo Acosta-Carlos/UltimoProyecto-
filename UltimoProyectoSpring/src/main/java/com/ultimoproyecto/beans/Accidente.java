@@ -7,15 +7,15 @@ public class Accidente {
 	private String hora;
 	private String suceso;
 	private String lugar;
-	private int clienteid;
+	private int cliente_id;
 
-	public Accidente(int idaccidente, String fecha, String hora, String suceso, String lugar, int clienteid) {
+	public Accidente(int idaccidente, String fecha, String hora, String suceso, String lugar, int cliente_id) {
 		this.idaccidente = idaccidente;
 		this.fecha = fecha;
 		this.hora = hora;
 		this.suceso = suceso;
 		this.lugar = lugar;
-		this.clienteid = clienteid;
+		this.cliente_id = cliente_id;
 	}
 
 	public Accidente() {
@@ -89,15 +89,15 @@ public class Accidente {
 
 
 
-	public int getClienteid() {
-		return clienteid;
+	public int getCliente_id() {
+		return cliente_id;
 	}
 
 
 
 
-	public void setClienteid(int clienteid) {
-		this.clienteid = clienteid;
+	public void setCliente_id(int clienteid) {
+		this.cliente_id = clienteid;
 	}
 
 
@@ -106,7 +106,7 @@ public class Accidente {
 	@Override
 	public String toString() {
 		return "Accidente [idaccidente=" + idaccidente + ", fecha=" + fecha + ", hora=" + hora + ", suceso=" + suceso
-				+ ", lugar=" + lugar + ", clienteid=" + clienteid + "]";
+				+ ", lugar=" + lugar + ", cliente_id=" + cliente_id + "]";
 	}
 	
 	

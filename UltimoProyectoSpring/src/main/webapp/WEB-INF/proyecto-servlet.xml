@@ -39,6 +39,14 @@
 		<property name="template" ref="jt"></property>    
 	</bean>
 	
+	<bean id="asesodao" class="com.ultimoproyecto.dao.AsesoriaDao">    
+		<property name="template" ref="jt"></property>    
+	</bean>
+	
+	<bean id="accidao" class="com.ultimoproyecto.dao.AccidenteDao">    
+		<property name="template" ref="jt"></property>    
+	</bean>
+	
 
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:annotation-driven />	

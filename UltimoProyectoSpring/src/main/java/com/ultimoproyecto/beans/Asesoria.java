@@ -112,7 +112,7 @@ public class Asesoria {
 	@Override
 	public String toString() {
 		return "Asesoria [idasesoria=" + idasesoria + ", detalle=" + detalle + ", gestion=" + gestion + ", propuestas="
-				+ propuestas + ", fecha=" + fecha + ", especial=" + especial + ", visitaid=" + visitas_idvisita + "]";
+				+ propuestas + ", fecha=" + fecha + ", especial=" + especial + ", visitas_idvisita=" + visitas_idvisita + "]";
 	}
 	
 	

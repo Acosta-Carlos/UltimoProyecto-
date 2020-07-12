@@ -15,87 +15,79 @@
     
      <link href="${bootstrapCSS}" rel="stylesheet" />
     <script src="${jqueryJS}"></script>
-    <title>Solicitar Asesorias</title>
+    <title>Reportar Accidente</title>
   </head>
    
 
   <body>
     <div class="jumbotron">
         <header class="text-center">
-            <h2>Solicitar Asesoria </h2>
+            <h2>Reportar Accidente </h2>
         </header>
     </div> 
     
-     <form:form method="post" action="save">
+     <form:form method="post" action="saveacci">
       <div class="container">
           <div class="row">
-             <label class="col-4"><h5>ID Asesoria:</h5></label>
+             <label class="col-4">  ID Accidente:</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>              
-              <form:input type="number" class="col-6 input-group" path="id"/>
+              <form:input class="col-6 input-group" path="idaccidente"/>
           </div>
     	<br><br>
           <div class="row">
-              <label class="col-4"><h5>Detalle :</h5></label>
+              <label class="col-4">  Fecha :</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="detalle"/>
+              <form:input  class="col-6 input-group" path="fecha"/>
           </div>
           <br><br>
           
           
           <div class="row">
-              <label class="col-4"><h5>Gestión:</h5></label>
+              <label class="col-4">  Hora:</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="number" class="col-6 input-group" path="gestion"/>
+              <form:input  class="col-6 input-group" path="hora"/>
           </div>
           <br><br>
           
           
           <div class="row">
-              <label class="col-4"><h5>Propuestas:</h5></label>
+              <label class="col-4">  Suceso:</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="propuestas"/>
-          </div>
-          <br><br>
-          
-          
-          
-          <div class="row">
-              <label class="col-4"><h5>Fecha:</h5></label>
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><b>></b></span>
-              </div>
-              <form:input type="text" class="col-6 input-group" path="fecha"/>
+              <form:input  class="col-6 input-group" path="suceso"/>
           </div>
           <br><br>
           
           
           
           <div class="row">
-              <label class="col-4"><h5>Especial:</h5></label>
+              <label class="col-4">Lugar:</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input type="text" class="col-6 input-group" path="especial"/>
+              <form:input class="col-6 input-group" path="lugar"/>
+          </div>
+          <br><br>
+          
+          
+          
+          <div class="row">
+              <label class="col-4">  Cliente id :</label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input class="col-6 input-group" path="cliente_id"/>
           </div>
           <br><br>
     
-    
-    	<div class="row">
-              <label class="col-4"><h5>Visita Id:</h5></label>
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><b>></b></span>
-              </div>
-              <form:input type="text" class="col-6 input-group" path="visitaid"/>
-          </div>
-          <br><br>
+   
            <c:if test="${ccmensaje != null}">
 					<h3><c:out value="${ccmensaje}"></c:out></h3>
 				</c:if>
@@ -103,9 +95,9 @@
           
           <div class="row">
                <div class="container" style="max-width:55%">
-               <input type="submit" class="btn btn-warning col-4" value="Listado de Asesorias" formaction="viewase">
+               <input type="submit" class="btn btn-warning col-4" value="Listado de Accidentes" formaction="viewaccidente">
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="submit" class="btn btn-warning col-4" value="Agregar Asesoria">
+                <input type="submit" class="btn btn-warning col-4" value="Agregar Accidente">
                </div>
            </div>          
         </div>

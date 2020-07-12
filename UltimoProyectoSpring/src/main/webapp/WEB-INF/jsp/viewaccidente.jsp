@@ -1,10 +1,11 @@
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>      
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Gestionar Pagos de Clientes</title>
+<title>Listado de Accidente</title>
     <!-- CSS Bootstrap -->
 	<spring:url value="/resources/css/bootstrap.min.css" var="bootstrapCSS" />
     <spring:url value="/resources/css/datatables.css" var="datatablesCSS"/>
@@ -25,7 +26,7 @@
 </head>
 <body style="padding: 10px;">
 
-	<h1>Listar Pagos de Clientes</h1>
+	<h1>Listado de Accidente</h1>
 	<c:if test="${ccmensaje != null}">
 		<h2>
 			<c:out value="${ccmensaje}"></c:out>
@@ -35,29 +36,38 @@
 <table id="tabla" class="table table-striped table-bordered" style="width: 100%; ">
 	<thead>		
 	<tr>
-		<th>ID Pago</th>
-		<th>Mes/Año</th>
-		<th>Monto Regular</th>
-		<th>Monto Adicional</th>
-		<th>ID Cliente</th>
+		<th>ID Accidente</th>
+		<th>Fecha</th>
+		<th>Hora</th>
+		<th>Suceso</th>
+		<th>Lugar</th>
+		<th>Cliente id</th>
+		<th>Acciones<th>
+
 	</tr>
 	</thead>
+	
 	<tbody>
-	<!--JSTL para cada campo en la variable items-->
-	<c:forEach items="${list}" var="pag">
-		<tr>
-			<td>${pag.idpago}</td>
-			<td>${pag.mesanio}</td>
-			<td>$${pag.montoregular}</td>
-			<td>$${pag.montoadicionales}</td>
-			<td>${pag.idcliente}</td>
+	<c:forEach items="${list}" var="acci">
+	<tr>
+		<td>${acci.idaccidente}</td> 
+		<td>${acci.fecha}</td>
+		<td>${acci.hora}</td>
+		<td>${acci.suceso}</td>
+		<td>${acci.lugar}</td>
+		<td>${acci.cliente_id}</td>
+		<td>
+			<a href="deleteacci/${acci.idaccidente}">Eliminar</a>&nbsp;
+			<a href="editacci/${acci.idaccidente}">Editar</a>&nbsp;
+		</td>
 		</tr>
 	</c:forEach>
 	</tbody>
 </table>
 <br/>
-	<a href="pagform">Agregar nuevo Pago</a>&nbsp;&nbsp;
+	<a href="accidenteform">Agregar nueva asesoria </a>&nbsp;&nbsp;
 	<a href="index.jsp">Volver al inicio</a>
 
 </body>
+
 </html>

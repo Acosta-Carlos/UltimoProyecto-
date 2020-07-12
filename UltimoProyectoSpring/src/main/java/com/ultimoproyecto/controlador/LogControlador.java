@@ -25,7 +25,7 @@ public class LogControlador {
         try {
            // Apertura del fichero y creacion de BufferedReader para poder
            // hacer una lectura comoda (disponer del metodo readLine()).
-           archivo = new File ("C:\\Users\\jacob\\Documents\\log.out");
+           archivo = new File ("./log/log.out");
            fr = new FileReader (archivo);
            br = new BufferedReader(fr);
 
