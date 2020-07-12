@@ -1,7 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>    
-
-<!doctype html>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>      
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -14,45 +13,69 @@
     
     <link href="${bootstrapCSS}" rel="stylesheet" />
     <script src="${jqueryJS}"></script>
-    <title>Agregar Empleado</title>
+    <title>Ingresar Actividad de Mejora</title>
   </head>
-  <body>
+<body>
     <div class="jumbotron">
         <header class="text-center">
-            <h2>Agregar Empleado</h2>
+            <h2>Ingresar Actividad de Mejora</h2>
         </header>
     </div> 
-     <form:form method="post" action="emplsave">
+     <form:form method="post" action="mejsave">
       <div class="container">
-                <div class="row">
-             <label class="col-4"><h5>ID Empleado:</h5></label>
+          <div class="row">
+             <label class="col-4"><h5>ID Mejora:</h5></label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>              
-              <form:input class="col-6 input-group" path="idempleado"/>
+              <form:input class="col-6 input-group" path="idmejora"/>
           </div>
           <br><br>
           <div class="row">
-             <label class="col-4"><h5>Nombre:</h5></label>
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><b>></b></span>
-              </div>              
-              <form:input class="col-6 input-group" path="nombre"/>
-          </div>
-          <br><br>
-          <div class="row">
-              <label class="col-4"><h5>Especialidad:</h5></label>
+              <label class="col-4"><h5>Fecha:</h5></label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input class="col-6 input-group" path="especialidad"/>
+              <form:input class="col-6 input-group" path="fecha" value="dd/mm/aaaa"/>
+          </div>
+          <br><br>
+          <div class="row">
+              <label class="col-4"><h5>Motivo:</h5></label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input class="col-6 input-group" path="motivo"/>
+          </div>
+          <br><br>
+          <div class="row">
+              <label class="col-4"><h5>Actividades:</h5></label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input class="col-6 input-group" path="actividades"/>
+          </div>
+          <br><br>
+          <div class="row">
+              <label class="col-4"><h5>Estado:</h5></label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input class="col-6 input-group" path="estado"/>
+          </div>
+          <br><br>
+          <div class="row">
+              <label class="col-4"><h5>ID de Cliente:</h5></label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input class="col-6 input-group" path="cliente_id"/>
           </div>
           <br><br><br>
            <div class="row">
                <div class="container" style="max-width:55%">
-               <a class="btn btn-warning col-4" href="viewemp" role="button">Volver</a>
+               <a class="btn btn-warning col-4" href="viewmej" role="button">Volver</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-               <input type="submit" class="btn btn-warning col-4" value="Agregar Empleado">
+               <input type="submit" class="btn btn-warning col-4" value="Confirmar">
                </div>
            </div>          
         </div>

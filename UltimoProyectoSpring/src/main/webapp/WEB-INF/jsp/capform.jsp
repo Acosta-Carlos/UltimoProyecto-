@@ -1,5 +1,5 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>    
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>      
 
 <!doctype html>
 <html lang="en">
@@ -14,45 +14,63 @@
     
     <link href="${bootstrapCSS}" rel="stylesheet" />
     <script src="${jqueryJS}"></script>
-    <title>Agregar Empleado</title>
+    <title>Agregar Capacitación</title>
   </head>
   <body>
     <div class="jumbotron">
         <header class="text-center">
-            <h2>Agregar Empleado</h2>
+            <h2>Agregar Capacitación</h2>
         </header>
     </div> 
-     <form:form method="post" action="emplsave">
+     <form:form method="post" action="capsave">
       <div class="container">
-                <div class="row">
-             <label class="col-4"><h5>ID Empleado:</h5></label>
+          <div class="row">
+             <label class="col-4"><h5>ID Capacitación:</h5></label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>              
-              <form:input class="col-6 input-group" path="idempleado"/>
+              <form:input class="col-6 input-group" path="idcapacitacion"/>
           </div>
           <br><br>
           <div class="row">
-             <label class="col-4"><h5>Nombre:</h5></label>
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><b>></b></span>
-              </div>              
-              <form:input class="col-6 input-group" path="nombre"/>
-          </div>
-          <br><br>
-          <div class="row">
-              <label class="col-4"><h5>Especialidad:</h5></label>
+              <label class="col-4"><h5>Fecha:</h5></label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input class="col-6 input-group" path="especialidad"/>
+              <form:input class="col-6 input-group" path="fecha"/>
           </div>
+          <br><br>
+          <div class="row">
+              <label class="col-4"><h5>Hora:</h5></label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input class="col-6 input-group" path="hora"/>
+          </div>
+          <br><br>
+          <div class="row">
+              <label class="col-4"><h5>Numero asistentes:</h5></label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input class="col-6 input-group" path="numasistentes"/>
+          </div>
+          <br><br>
+          <div class="row">
+              <label class="col-4"><h5>Id Visita:</h5></label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input class="col-6 input-group" path="visitas_idvisita"/>
+          </div>
+          <br><br>
+         
           <br><br><br>
            <div class="row">
                <div class="container" style="max-width:55%">
-               <a class="btn btn-warning col-4" href="viewemp" role="button">Volver</a>
+               <a class="btn btn-warning col-4" href="viewcap" role="button">Volver</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-               <input type="submit" class="btn btn-warning col-4" value="Agregar Empleado">
+               <input type="submit" class="btn btn-warning col-4" value="Agregar Capacitación">
                </div>
            </div>          
         </div>

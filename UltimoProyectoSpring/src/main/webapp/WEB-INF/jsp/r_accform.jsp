@@ -1,5 +1,5 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>    
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>      
 
 <!doctype html>
 <html lang="en">
@@ -14,45 +14,70 @@
     
     <link href="${bootstrapCSS}" rel="stylesheet" />
     <script src="${jqueryJS}"></script>
-    <title>Agregar Empleado</title>
+    <title>Reportar Accidente</title>
   </head>
   <body>
     <div class="jumbotron">
         <header class="text-center">
-            <h2>Agregar Empleado</h2>
+            <h2>Reportar Accidente </h2>
         </header>
     </div> 
-     <form:form method="post" action="emplsave">
+     <form:form method="post" action="r_accsave">
       <div class="container">
-                <div class="row">
-             <label class="col-4"><h5>ID Empleado:</h5></label>
+          <div class="row">
+             <label class="col-4"><h5> ID Accidente:</h5></label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>              
-              <form:input class="col-6 input-group" path="idempleado"/>
+              <form:input class="col-6 input-group" path="idaccidente"/>
           </div>
           <br><br>
           <div class="row">
-             <label class="col-4"><h5>Nombre:</h5></label>
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><b>></b></span>
-              </div>              
-              <form:input class="col-6 input-group" path="nombre"/>
-          </div>
-          <br><br>
-          <div class="row">
-              <label class="col-4"><h5>Especialidad:</h5></label>
+              <label class="col-4"><h5>Fecha:</h5></label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input class="col-6 input-group" path="especialidad"/>
+              <form:input class="col-6 input-group" path="fecha" value="fecha"/>
           </div>
-          <br><br><br>
+          <br><br>
+          <div class="row">
+              <label class="col-4"><h5>Hora:</h5></label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input class="col-6 input-group" path="hora"/>
+          </div>
+          <br><br>
+          <div class="row">
+              <label class="col-4"><h5>Suceso:</h5></label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input class="col-6 input-group" path="suceso"/>
+          </div>
+          <br><br>
+          <div class="row">
+              <label class="col-4"><h5>lugar:</h5></label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input class="col-6 input-group" path="lugar"/>
+          </div>
+          <br><br>
+            <div class="row">
+              <label class="col-4"><h5>Cliente ID:</h5></label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input class="col-6 input-group" path="cliente_id"/>
+          </div>
+          <br><br>
+         
            <div class="row">
                <div class="container" style="max-width:55%">
-               <a class="btn btn-warning col-4" href="viewemp" role="button">Volver</a>
+                <a class="btn btn-warning col-4" href="/UltimoProyectoSpring/" role="button">Volver</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-               <input type="submit" class="btn btn-warning col-4" value="Agregar Empleado">
+               <input type="submit" class="btn btn-warning col-4" value="Reportar Accidente">
                </div>
            </div>          
         </div>
