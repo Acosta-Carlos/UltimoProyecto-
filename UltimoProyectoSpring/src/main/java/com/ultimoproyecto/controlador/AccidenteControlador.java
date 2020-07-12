@@ -31,14 +31,14 @@ import com.ultimoproyecto.dao.AccidenteDao;
 	        return "redirect:/viewacc";
 	    }
 	    
-	    @RequestMapping("/accform")    
+	    @RequestMapping("/viewacc")    
 	    public String viewcap(Model m){    
 	        List<Accidente> list=accdao.getAccidente();
 	        m.addAttribute("list",list);  
 	        return "viewacc";
 	    }
 	  
-	    @RequestMapping(value="/acceditform/{idaccidente}")    
+	    @RequestMapping(value="/accedit/{idaccidente}")    
 	    public String edit(@PathVariable int idaccidente, Model m){    
 	    	Accidente acc=accdao.getCliById(idaccidente);
 	        m.addAttribute("command",acc);

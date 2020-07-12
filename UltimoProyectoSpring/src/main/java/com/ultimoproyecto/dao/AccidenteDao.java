@@ -23,7 +23,7 @@ package com.ultimoproyecto.dao;
 		}
 		
 		public int update(Accidente c){    
-		    String sql="update Cliente set idaccidente='"+c.getIdaccidente()+"', Fecha='"+c.getFecha()+"', Hora='"+c.getHora()+"',Suceso='"+c.getSuceso()+"', Lugar='"+c.getLugar()+"', Cliente id='"+c.getClienteid()+"' where id="+c.getIdaccidente()+"";
+		    String sql="update Cliente set idaccidente='"+c.getIdaccidente()+"', Fecha='"+c.getFecha()+"', Hora='"+c.getHora()+"',Suceso='"+c.getSuceso()+"', Lugar='"+c.getLugar()+"', Cliente id='"+c.getClienteid()+"' where idaccidente="+c.getIdaccidente()+"";
 		    return template.update(sql);    
 		}   
 		

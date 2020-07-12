@@ -47,7 +47,10 @@
 		<td>${cap.hora}</td>
 		<td>${cap.num_asistentes}</td>
 		<td>${cap.idvisita}</td>
-	
+		<td>
+			<a href="deletecap/${acc.idaccidente}">Eliminar</a>&nbsp;
+			<a href="editcap/${acc.idaccidente}">Editar</a>&nbsp;
+		</td>
 		</tr>
 	</c:forEach>
 	</tbody>

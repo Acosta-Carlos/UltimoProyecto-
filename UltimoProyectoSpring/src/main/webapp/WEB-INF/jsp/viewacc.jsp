@@ -49,6 +49,10 @@
 		<td>${acc.suceso}</td>
 		<td>${acc.lugar}</td>
 		<td>${acc.clienteid}</td>
+		<td>
+			<a href="deleteacc/${acc.idaccidente}">Eliminar</a>&nbsp;
+			<a href="editacc/${acc.idaccidente}">Editar</a>&nbsp;
+		</td>
 		</tr>
 	</c:forEach>
 	</tbody>
