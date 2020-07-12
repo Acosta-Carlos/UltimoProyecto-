@@ -63,6 +63,13 @@
 		<property name="template" ref="jt"></property>	
 	</bean>	
 	
+	<bean id="visitadao" class="com.ultimoproyecto.dao.VisitaDao">    
+		<property name="template" ref="jt"></property>    
+	</bean>
+	<bean id="chedao" class="com.ultimoproyecto.dao.ChequeoDao">    
+		<property name="template" ref="jt"></property>    
+	</bean>
+	
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:annotation-driven />	
 </beans>

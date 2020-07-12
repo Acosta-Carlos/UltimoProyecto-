@@ -43,6 +43,8 @@
 	<a href="viewase" class="list-group-item list-group-item-action list-group-item-light">Gestionar Asesorias</a>
 	<a href="viewmej" class="list-group-item list-group-item-action list-group-item-dark">Gestionar Actividades de Mejoras</a>
 	<a href="viewpag" class="list-group-item list-group-item-action list-group-item-light">Gestionar Pagos</a>
+	<a href="viewvisita" class="list-group-item list-group-item-action list-group-item-dark">Gestionar Visitas</a>
+	<a href="viewchequeo" class="list-group-item list-group-item-action list-group-item-light">Gestionar Chequeos</a>
 	</div>
 </div>
 

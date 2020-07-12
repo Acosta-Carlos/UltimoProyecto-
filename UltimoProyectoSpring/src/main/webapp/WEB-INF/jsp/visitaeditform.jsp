@@ -14,71 +14,93 @@
     
     <link href="${bootstrapCSS}" rel="stylesheet" />
     <script src="${jqueryJS}"></script>
-    <title>Agregar Accidente</title>
+    <title>Editar Visita</title>
   </head>
   <body>
     <div class="jumbotron">
         <header class="text-center">
-            <h2>Agregar Accidente </h2>
+            <h2>Editar Visita</h2>
         </header>
     </div> 
-     <form:form method="post" action="capsave">
+     <form:form method="post" action="/UltimoProyectoSpring/editsavevisita">
+      
+      
       <div class="container">
-          <div class="row">
-             <label class="col-4"><h5> ID Accidente:</h5></label>
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><b>></b></span>
-              </div>              
-              <form:input class="col-6 input-group" path="idaccidente"/>
-          </div>
-          <br><br>
-          <div class="row">
-              <label class="col-4"><h5>Fecha:</h5></label>
+      <div class="row">
+              <label class="col-4">  Dirección :</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input class="col-6 input-group" path="fecha" value="dd/mm/aaaa"/>
+              <form:input  class="col-6 input-group" path="direccion"/>
           </div>
           <br><br>
+          
+          
           <div class="row">
-              <label class="col-4"><h5>Hora:</h5></label>
+              <label class="col-4">  Ciudad:</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input class="col-6 input-group" path="hora"/>
+              <form:input  class="col-6 input-group" path="ciudad"/>
           </div>
           <br><br>
+          
+          
           <div class="row">
-              <label class="col-4"><h5>Suceso:</h5></label>
+              <label class="col-4">  Fecha:</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input class="col-6 input-group" path="suceso"/>
+              <form:input  class="col-6 input-group" path="fecha"/>
           </div>
           <br><br>
+          
+          
+          
           <div class="row">
-              <label class="col-4"><h5>lugar:</h5></label>
+              <label class="col-4">Resumen:</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
-              <form:input class="col-6 input-group" path="lugar"/>
+              <form:input class="col-6 input-group" path="resumen"/>
           </div>
           <br><br>
+          
+          
+          
+          <div class="row">
+              <label class="col-4">  Observaciones :</label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input class="col-6 input-group" path="observaciones"/>
+          </div>
+          <br><br>
+          
             <div class="row">
-              <label class="col-4"><h5>Cliente ID:</h5></label>
+              <label class="col-4">  Cliente ID :</label>
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>
               <form:input class="col-6 input-group" path="cliente_id"/>
           </div>
           <br><br>
-         
-          <br><br><br>
-           <div class="row">
+          
+            <div class="row">
+              <label class="col-4">  Empleado ID :</label>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><b>></b></span>
+              </div>
+              <form:input class="col-6 input-group" path="empleado_idempleado"/>
+          </div>
+          <br><br>
+   
+          <div class="row">
                <div class="container" style="max-width:55%">
-               <a class="btn btn-warning col-4" href="viewacc" role="button">Volver</a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-               <input type="submit" class="btn btn-warning col-4" value="Agregar Accidente">
+               <input type="submit" class="btn btn-warning col-4" value="Volver" name="viewvisita"/>
+                <form:hidden path="idvisita"/>
+                &nbsp;&nbsp;&nbsp;&nbsp;               
+               <input type="submit" class="btn btn-warning col-4" value="Editar y Guardar" >
                </div>
            </div>          
         </div>
@@ -95,4 +117,5 @@
     <script src="${popperJS}"></script>
     <script src="${bootstrapJS}"></script>
   </body>
+
 </html>
