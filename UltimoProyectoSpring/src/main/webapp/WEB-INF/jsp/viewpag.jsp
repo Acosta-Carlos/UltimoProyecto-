@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Gestionar Pagos de Clientes</title>
+<title>Listar Pagos de Clientes</title>
     <!-- CSS Bootstrap -->
 	<spring:url value="/resources/css/bootstrap.min.css" var="bootstrapCSS" />
     <spring:url value="/resources/css/datatables.css" var="datatablesCSS"/>
