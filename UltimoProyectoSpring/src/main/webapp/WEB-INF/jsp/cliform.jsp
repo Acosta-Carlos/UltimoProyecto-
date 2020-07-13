@@ -30,6 +30,7 @@
                 <span class="input-group-text" id="basic-addon1"><b>></b></span>
               </div>              
               <form:input class="col-6 input-group" path="id"/>
+              <form:errors path="id"></form:errors>
           </div>
           <br><br>
           <div class="row">

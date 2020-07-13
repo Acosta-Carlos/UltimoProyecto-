@@ -1,12 +1,26 @@
 package com.ultimoproyecto.beans;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+
 public class Cliente {
 
+	@NotNull
+	@Size(min=100, max=999)
 	private int id;
+	@NotBlank
 	private String nombre;
+	@Pattern(regexp="[0-9]*")
 	private int telefono;
+	@Email
 	private String correoelectronico;
+	@NotBlank
 	private String rubro;
+	@NotBlank
 	private String direccion;
 	
 	public Cliente() {
