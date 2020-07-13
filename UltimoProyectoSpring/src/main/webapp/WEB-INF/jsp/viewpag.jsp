@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Gestionar Pagos de Clientes</title>
+<title>Listar Pagos de Clientes</title>
     <!-- CSS Bootstrap -->
 	<spring:url value="/resources/css/bootstrap.min.css" var="bootstrapCSS" />
     <spring:url value="/resources/css/datatables.css" var="datatablesCSS"/>
@@ -33,8 +33,9 @@
 		<th>ID Pago</th>
 		<th>Mes/Año</th>
 		<th>Monto Regular</th>
-		<th>Monto Adicional</th>
+		<th>Monto Adicionales</th>
 		<th>ID Cliente</th>
+		<th>Acciones</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -46,6 +47,10 @@
 			<td>$${pag.montoregular}</td>
 			<td>$${pag.montoadicionales}</td>
 			<td>${pag.cliente_id}</td>
+			<td>
+				<a href="deletepag/${pag.idpago}">Eliminar</a>&nbsp;
+				<a href="editpag/${pag.idpago}">Editar</a>
+			</td>
 		</tr>
 	</c:forEach>
 	</tbody>

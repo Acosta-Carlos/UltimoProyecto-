@@ -7,8 +7,12 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
                 
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+<<<<<<< HEAD
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
                 
+=======
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+>>>>>>> aaeafc6340ab8656057bbcc91bbfd9dbb604ec02
         <property name="context-root" value="UltimoProyectoSpring"/>
                 
         <property name="java-output-path" value="/UltimoProyectoSpring/target/classes"/>
