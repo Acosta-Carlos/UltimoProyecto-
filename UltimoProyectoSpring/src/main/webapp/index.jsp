@@ -23,8 +23,8 @@
 <h2>Cliente</h2>
 
 	<div class="list-group text-center">
-	<a href="SolicitarAsesoria" class="list-group-item list-group-item-action list-group-item-light">Solicitar Asesoria </a>
- 	<a href="AgregarAccidente" class="list-group-item list-group-item-action list-group-item-dark"> Reportar Accidente</a>
+	<a href="c_aseform" class="list-group-item list-group-item-action list-group-item-light">Solicitar Asesoria </a>
+ 	<a href="r_accform" class="list-group-item list-group-item-action list-group-item-dark"> Reportar Accidente</a>
 	</div>
 </div>
 
@@ -38,11 +38,15 @@
 	<div class="list-group text-center">
 	<a href="viewcli" class="list-group-item list-group-item-action list-group-item-light">Administrar Clientes</a>
 	<a href="viewemp" class="list-group-item list-group-item-action list-group-item-dark">Administrar Empleados</a>
-	<a href="ListarCapacitacion" class="list-group-item list-group-item-action list-group-item-light">Gestionar Capacitaciones</a>
-	<a href="ListadoAccidente" class="list-group-item list-group-item-action list-group-item-dark">Gestionar Accidentes</a>
-	<a href="ListadoAsesoria" class="list-group-item list-group-item-action list-group-item-light">Gestionar Asesorias</a>
+
+	<a href="viewcap" class="list-group-item list-group-item-action list-group-item-light">Gestionar Capacitaciones</a>
+	<a href="viewacc" class="list-group-item list-group-item-action list-group-item-dark">Gestionar Accidentes</a>
+	<a href="viewase" class="list-group-item list-group-item-action list-group-item-light">Gestionar Asesorias</a>
+
 	<a href="viewmej" class="list-group-item list-group-item-action list-group-item-dark">Gestionar Actividades de Mejoras</a>
 	<a href="viewpag" class="list-group-item list-group-item-action list-group-item-light">Gestionar Pagos</a>
+	<a href="viewvisita" class="list-group-item list-group-item-action list-group-item-dark">Gestionar Visitas</a>
+	<a href="viewchequeo" class="list-group-item list-group-item-action list-group-item-light">Gestionar Chequeos</a>
 	</div>
 </div>
 

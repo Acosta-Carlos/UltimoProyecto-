@@ -18,23 +18,27 @@ JdbcTemplate template;
 	}
 	
 	public int save(Mejora m){    
-	    String sql="insert into mejoras (idmejora,fecha,motivo,actividades,estado,cliente_id) values('"+m.getIdmejora()+"','"+m.getFecha()+"','"+m.getMotivo()+"','"+m.getActividades()+"','"+m.getEstado()+"','"+m.getClienteid()+"')";
+
+	    String sql="insert into mejoras (idmejora,fecha,motivo,actividades,estado,cliente_id) values('"+m.getIdmejora()+"','"+m.getFecha()+"','"+m.getMotivo()+"','"+m.getActividades()+"','"+m.getEstado()+"','"+m.getCliente_id()+"')";
+
 	    return template.update(sql);
 	}
 	
 	public int update(Mejora m){    
-	    String sql="update mejoras set idmejora='"+m.getIdmejora()+"', fecha='"+m.getFecha()+"', motivo='"+m.getMotivo()+"',actividades='"+m.getActividades()+"', estado='"+m.getEstado()+"', cliente_id='"+m.getClienteid()+"' where idmejora="+m.getIdmejora()+"";
+
+	    String sql="update mejoras set idmejora='"+m.getIdmejora()+"', fecha='"+m.getFecha()+"', motivo='"+m.getMotivo()+"',actividades='"+m.getActividades()+"', estado='"+m.getEstado()+"', cliente_id='"+m.getCliente_id()+"' where idmejora="+m.getIdmejora()+"";
 	    return template.update(sql);    
 	}   
 	
-	public int delete(int id){    
-	    String sql="delete from mejoras where idmejora="+id+"";
+	public int delete(int idmejora){    
+	    String sql="delete from mejoras where idmejora="+idmejora+"";
 	    return template.update(sql);
 	}    
 
-	public Mejora getMejById(int id){    
+	public Mejora getMejById(int idmejora){    
 	    String sql="select * from mejoras where idmejora=?";
-	    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Mejora>(Mejora.class));    
+	    return template.queryForObject(sql, new Object[]{idmejora},new BeanPropertyRowMapper<Mejora>(Mejora.class));    
+
 	}
 	
 	public List<Mejora> getMejoras(){    
@@ -46,9 +50,12 @@ JdbcTemplate template;
 	            m.setMotivo(rs.getString(3));
 	            m.setActividades(rs.getString(4));
 	            m.setEstado(rs.getString(5));
-	            m.setClienteid(rs.getInt(6));
+	            m.setCliente_id(rs.getInt(6));
+
 	            return m;
 	        }    
 	    });    
 	}
+
 }
+

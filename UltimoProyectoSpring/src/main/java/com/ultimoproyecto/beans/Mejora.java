@@ -63,19 +63,23 @@ public class Mejora {
 		this.estado = estado;
 	}
 
-	public int getClienteid() {
+
+	public int getCliente_id() {
 		return cliente_id;
 	}
 
-	public void setClienteid(int cliente_id) {
+	public void setCliente_id(int cliente_id) {
+
 		this.cliente_id = cliente_id;
 	}
 
 	@Override
 	public String toString() {
 		return "Mejora [idmejora=" + idmejora + ", fecha=" + fecha + ", motivo=" + motivo + ", actividades="
-				+ actividades + ", estado=" + estado + ", clienteid=" + cliente_id + "]";
+
+				+ actividades + ", estado=" + estado + ", cliente_id=" + cliente_id + "]";
 	}
 		
 	
 }
+

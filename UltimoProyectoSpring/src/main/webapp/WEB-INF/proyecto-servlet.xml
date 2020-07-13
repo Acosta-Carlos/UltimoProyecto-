@@ -50,6 +50,29 @@
 		<property name="template" ref="jt"></property>	
 	</bean>
 	
+	<bean id="capadao" class="com.ultimoproyecto.dao.CapacitacionDao">    
+		<property name="template" ref="jt"></property>    
+	</bean>
+	
+	<bean id="asesodao" class="com.ultimoproyecto.dao.AsesoriaDao">    
+		<property name="template" ref="jt"></property>    
+	</bean>
+
+	<bean id="accdao" class="com.ultimoproyecto.dao.AccidenteDao">    
+		<property name="template" ref="jt"></property>    
+	</bean>
+	
+	<bean id="daomej" class="com.ultimoproyecto.dao.MejoraDao">
+		<property name="template" ref="jt"></property>	
+	</bean>	
+	
+	<bean id="visitadao" class="com.ultimoproyecto.dao.VisitaDao">    
+		<property name="template" ref="jt"></property>    
+	</bean>
+	<bean id="chedao" class="com.ultimoproyecto.dao.ChequeoDao">    
+		<property name="template" ref="jt"></property>    
+	</bean>
+	
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:annotation-driven />	
 </beans>

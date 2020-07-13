@@ -52,7 +52,7 @@
                <div class="container" style="max-width:55%">
                <a class="btn btn-warning col-4" href="viewemp" role="button">Volver</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-               <input type="submit" class="btn btn-warning col-8" value="Agregar Empleado">
+               <input type="submit" class="btn btn-warning col-4" value="Agregar Empleado">
                </div>
            </div>          
         </div>

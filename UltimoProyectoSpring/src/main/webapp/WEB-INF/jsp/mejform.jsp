@@ -73,7 +73,9 @@
           <br><br><br>
            <div class="row">
                <div class="container" style="max-width:55%">
-               <a class="btn btn-warning col-4" href="viewcli" role="button">Volver</a>
+
+               <a class="btn btn-warning col-4" href="viewmej" role="button">Volver</a>
+
                 &nbsp;&nbsp;&nbsp;&nbsp;
                <input type="submit" class="btn btn-warning col-4" value="Confirmar">
                </div>

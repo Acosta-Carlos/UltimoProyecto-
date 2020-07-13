@@ -50,15 +50,19 @@
 		<td>${mej.estado}</td>
 		<td>${mej.cliente_id}</td>
 		<td>
-			<a href="deletecli/${mej.idmejora}">Eliminar</a>&nbsp;
-			<a href="editcli/${mej.idmejora}">Editar</a>&nbsp;
+
+			<a href="deletemej/${mej.idmejora}">Eliminar</a>&nbsp;
+			<a href="editmej/${mej.idmejora}">Editar</a>&nbsp;
+
 		</td>
 		</tr>
 	</c:forEach>
 	</tbody>
 </table>
 <br/>
-	<a href="cliform">Agregar nueva Mejora</a>&nbsp;&nbsp;
+
+	<a href="mejform">Agregar nueva Mejora</a>&nbsp;&nbsp;
+
 	<a href="index.jsp">Volver al inicio</a>
 
 </body>
